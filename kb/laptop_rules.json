@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Premium Ultrabook",
+    "if": [
+      "budget_high",
+      "portable",
+      "long_battery"
+    ],
+    "then": "recommend:premium_ultrabook",
+    "priority": 5
+  }
+]
