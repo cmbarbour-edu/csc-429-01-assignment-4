@@ -8,5 +8,85 @@
     ],
     "then": "recommend:premium_ultrabook",
     "priority": 5
+  },
+  {
+    "name": "Budget Ultrabook",
+    "if": [
+      "budget_low",
+      "office_only",
+      "portable"
+    ],
+    "then": "recommend:budget_ultrabook",
+    "priority": 5
+  },
+  {
+    "name": "Gaming Laptop",
+    "if": [
+      "gaming",
+      "budget_medium"
+    ],
+    "then": "recommend:midrange_gaming_laptop",
+    "priority": 5
+  },
+  {
+    "name": "Pro Gaming Laptop",
+    "if": [
+      "gaming",
+      "budget_high"
+    ],
+    "then": "recommend:high_end_gaming_laptop",
+    "priority": 5
+  },
+  {
+    "name": "Creative Work (Portable)",
+    "if": [
+      "creative_work",
+      "portable"
+    ],
+    "then": "spec:ram_16_plus",
+    "priority": 5
+  },
+  {
+    "name": "Creative Work (Display)",
+    "if": [
+      "creative_work",
+      "large_screen"
+    ],
+    "then": "spec:display_15_plus_colour_accurate",
+    "priority": 5
+  },
+  {
+    "name": "Travel + Battery",
+    "if": [
+      "travel_often",
+      "long_battery"
+    ],
+    "then": "spec:battery_60wh_plus",
+    "priority": 5
+  },
+  {
+    "name": "OS Preference Mapping",
+    "if": [
+      "pref_os_macos"
+    ],
+    "then": "spec:macos_required",
+    "priority": 5
+  },
+  {
+    "name": "AI Acceleration",
+    "if": [
+      "needs_ai_accel"
+    ],
+    "then": "spec:gpu_with_tensor_cores",
+    "priority": 5
+  },
+  {
+    "name": "Linux Stability",
+    "if": [
+      "pref_os_linux",
+      "office_only"
+    ],
+    "then": "spec:linux_friendly_hw",
+    "priority": 5
   }
 ]
