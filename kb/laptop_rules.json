@@ -7,7 +7,7 @@
       "long_battery"
     ],
     "then": "recommend:premium_ultrabook",
-    "priority": 5
+    "priority": 3
   },
   {
     "name": "Budget Ultrabook",
@@ -17,7 +17,7 @@
       "portable"
     ],
     "then": "recommend:budget_ultrabook",
-    "priority": 5
+    "priority": 3
   },
   {
     "name": "Gaming Laptop",
@@ -26,7 +26,7 @@
       "budget_medium"
     ],
     "then": "recommend:midrange_gaming_laptop",
-    "priority": 5
+    "priority": 2
   },
   {
     "name": "Pro Gaming Laptop",
@@ -35,7 +35,7 @@
       "budget_high"
     ],
     "then": "recommend:high_end_gaming_laptop",
-    "priority": 5
+    "priority": 1
   },
   {
     "name": "Creative Work (Portable)",
@@ -43,7 +43,7 @@
       "creative_work",
       "portable"
     ],
-    "then": "spec:ram_16_plus",
+    "then": "spec:ram_16gb_plus",
     "priority": 5
   },
   {
@@ -70,7 +70,7 @@
       "pref_os_macos"
     ],
     "then": "spec:macos_required",
-    "priority": 5
+    "priority": 4
   },
   {
     "name": "AI Acceleration",
