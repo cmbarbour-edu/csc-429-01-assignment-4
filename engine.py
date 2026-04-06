@@ -7,6 +7,7 @@ class Rule:
     consequent: str
     priority: int = 0
     name: str = ""
+    confidence: float = 0.5
 
 class ForwardChainingEngine:
     def __init__(self, rules: List[Rule]):
@@ -63,18 +64,18 @@ class ForwardChainingEngine:
                     info = "- " + " ".join(fact.split("recommend:")[1].split("_"))
                     recommendation_info["recommendations"].append(info)
                     rule = next((r for r in self.rules if r.consequent == fact), None)
-                    recommendation_info["recommendations"].append(f"    - (Derived from rule: {rule.name})")
+                    recommendation_info["recommendations"].append(f"    - (Derived from rule: {rule.name} with a confidence factor of {rule.confidence})")
                 elif fact.startswith("spec:"):
                     info = "- " + " ".join(fact.split("spec:")[1].split("_"))
                     recommendation_info["specs"].append(info)
                     rule = next((r for r in self.rules if r.consequent == fact), None)
-                    recommendation_info["specs"].append(f"    - (Derived from rule: {rule.name})")
+                    recommendation_info["specs"].append(f"    - (Derived from rule: {rule.name} with a confidence factor of {rule.confidence})")
                 # If the fact contains similar formatting but does not start with recommend or spec, add it to the other facts section
                 elif fact.__contains__(":") and not fact.startswith("recommend:") and not fact.startswith("spec:"):
                     info = "- " +" ".join(fact.split(":")[1].split("_"))
                     recommendation_info["other facts"].append(info)
                     rule = next((r for r in self.rules if r.consequent == fact), None)
-                    recommendation_info["other facts"].append(f"    - (Derived from rule: {rule.name})")
+                    recommendation_info["other facts"].append(f"    - (Derived from rule: {rule.name} with a confidence factor of {rule.confidence})")
             # If there are no facts in the recommendations section, add a default message to indicate that there are no specific recommended laptops
             if recommendation_info["recommendations"] == []:
                 recommendation_info["recommendations"].append("- No specific laptop recommendations based on the provided facts")

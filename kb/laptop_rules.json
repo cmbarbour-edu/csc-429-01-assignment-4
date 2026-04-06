@@ -7,7 +7,8 @@
       "long_battery"
     ],
     "then": "recommend:premium_ultrabook",
-    "priority": 1
+    "priority": 1,
+    "confidence": 0.60
   },
   {
     "name": "Budget Ultrabook",
@@ -17,7 +18,8 @@
       "portable"
     ],
     "then": "recommend:budget_ultrabook",
-    "priority": 1
+    "priority": 1,
+    "confidence": 0.70
   },
   {
     "name": "Gaming Laptop",
@@ -26,7 +28,8 @@
       "budget_medium"
     ],
     "then": "recommend:midrange_gaming_laptop",
-    "priority": 1
+    "priority": 1,
+    "confidence": 0.90
   },
   {
     "name": "Pro Gaming Laptop",
@@ -35,7 +38,8 @@
       "budget_high"
     ],
     "then": "recommend:high_end_gaming_laptop",
-    "priority": 1
+    "priority": 1,
+    "confidence": 0.90
   },
   {
     "name": "Creative Work (Portable)",
@@ -44,7 +48,8 @@
       "portable"
     ],
     "then": "spec:ram_16gb_plus",
-    "priority": 2
+    "priority": 2,
+    "confidence": 0.95
   },
   {
     "name": "Creative Work (Display)",
@@ -53,7 +58,8 @@
       "large_screen"
     ],
     "then": "spec:display_15_plus_colour_accurate",
-    "priority": 2
+    "priority": 2,
+    "confidence": 0.95
   },
   {
     "name": "Travel + Battery",
@@ -62,7 +68,8 @@
       "long_battery"
     ],
     "then": "spec:battery_60wh_plus",
-    "priority": 2
+    "priority": 2,
+    "confidence": 0.70
   },
   {
     "name": "OS Preference Mapping",
@@ -70,7 +77,8 @@
       "pref_os_macos"
     ],
     "then": "spec:macos_required",
-    "priority": 2
+    "priority": 2,
+    "confidence": 0.60
   },
   {
     "name": "AI Acceleration",
@@ -78,7 +86,8 @@
       "needs_ai_accel"
     ],
     "then": "spec:gpu_with_tensor_cores",
-    "priority": 2
+    "priority": 2,
+    "confidence": 0.70
   },
   {
     "name": "Linux Stability",
@@ -87,6 +96,7 @@
       "office_only"
     ],
     "then": "spec:linux_friendly_hw",
-    "priority": 2
+    "priority": 2,
+    "confidence": 0.75
   }
 ]

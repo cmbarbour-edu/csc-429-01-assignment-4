@@ -11,6 +11,7 @@ def load_rules(path: str) -> List[Rule]:
             antecedents=r.get("if", []),
             consequent=r["then"],
             priority=r.get("priority", 0),
-            name=r.get("name", f"Rule #{i}")
+            name=r.get("name", f"Rule #{i}"),
+            confidence=r["confidence"]
         ))
     return rules
